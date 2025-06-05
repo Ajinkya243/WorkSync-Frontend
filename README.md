@@ -34,12 +34,13 @@ A full-stack web application for managing engineering resources, task assignment
 ---
 
 ## 🛠️ Tech Stack
-
+Backend Repository - https://github.com/Ajinkya243/WorkSync
 ### Backend:
 - **Node.js**
 - **Express.js**
 - **MongoDB + Mongoose**
 - **JWT** for authentication
+  
 
 ### Frontend:
 - **React.js**
