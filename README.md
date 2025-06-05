@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Engineering Resource Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application for managing engineering resources, task assignments, and team capacity, built with **Node.js**, **Express.js**, **MongoDB**, and **React.js**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+### 🔐 Authentication & Authorization
+- Secure login using **JWT (JSON Web Token)**
+- **Role-based access**: Manager and Engineer
+- Protected routes for authorized users only
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Role     | Access Permissions                            |
+| -------- | --------------------------------------------- |
+| Manager  | Manage projects, assign tasks, view engineers |
+| Engineer | View and edit profile, see assigned tasks     |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### 👨‍💼 Manager Features
+- View all **projects**
+- **Assign tasks** to engineers based on required skills
+- **Edit** or **delete** assigned tasks
+- View list of **engineers** with:
+  - Current task load
+  - Allocation percentage
+- Create new projects
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 👷 Engineer Features
+- View all **tasks assigned** to them
+- Access personal **profile page**
+- **Edit own profile** including skills and email
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
+Backend Repository - https://github.com/Ajinkya243/WorkSync
+### Backend:
+- **Node.js**
+- **Express.js**
+- **MongoDB + Mongoose**
+- **JWT** for authentication
+  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Frontend:
+- **React.js**
+- **HTML5**
+- **CSS3**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📁 Folder Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+engineering-resource-management/
+│
+├── client/ # React frontend
+│ ├── src/
+│ ├── public/
+│ └── ...
+│
+├── server/ # Node.js backend
+│ ├── controllers/
+│ ├── routes/
+│ ├── models/
+│ ├── middleware/
+│ ├── index.js
+│ └── ...
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🤖 How I Built This App with Help from ChatGPT
+While building this Engineering Resource Management App, I explored many concepts and implementation details by asking ChatGPT how things work behind the scenes.
+- How does JWT authentication work? How can I protect routes and handle login differently for manager and engineer roles
+- How to structure an Express.js backend in a modular way? What should go into routes, controllers, and models
+- How to store and update engineer capacity correctly? Can availableCapacity be automatically set based on maxCapacity
+- How to calculate remaining capacity dynamically based on assigned tasks
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![image](https://github.com/user-attachments/assets/e668fd35-2346-48cc-95f1-6d8702c0aff0)
 
-## Learn More
+Create new assignment
+![image](https://github.com/user-attachments/assets/d896e190-d902-4719-8d75-7cd179373b78)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![image](https://github.com/user-attachments/assets/ee962044-ba04-481a-8fd8-3989e4baa46e)
+![image](https://github.com/user-attachments/assets/2595fa16-0f8c-463c-9ef3-314e414f0d76)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
