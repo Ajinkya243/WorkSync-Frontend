@@ -16,7 +16,6 @@ const AssignmentDetails=()=>{
         const response=await axios.get(`https://work-sync-psi.vercel.app/api/assignments/${id}`);
         setDetails(response.data);
     }
-    console.log(details);
     const handleDelete=async()=>{
         try{
             const response=await axios.delete(`https://work-sync-psi.vercel.app/api/assignments/${id}`)
@@ -24,7 +23,7 @@ const AssignmentDetails=()=>{
             navigate(`/api/projects/${details.projectId}`);
         }
         catch(error){
-            console.log(error);
+            toast.error("Error occur")
         }
     }
     useEffect(()=>{

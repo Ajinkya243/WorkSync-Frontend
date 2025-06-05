@@ -34,17 +34,14 @@ const ProjectModal = ({onSuccess}) => {
 
   const onSubmit = async(data) => {
     try{
-        console.log("Form Data Submitted:", data);
         setStatus("pending")
     const response=await axios.post("https://work-sync-psi.vercel.app/api/projects",data);
-    console.log(response);
     setStatus("success")
     setShowModal(false)
     toast.success("Project added successfully.")
     onSuccess();
     }
     catch(error){
-        console.log(error);
         setStatus("error");
         toast.error("Error Occur")
     }

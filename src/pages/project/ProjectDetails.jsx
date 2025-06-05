@@ -5,6 +5,7 @@ import axios from 'axios';
 import classes from './ProjectDetails.module.css';
 import { useGlobalState } from "../../context/GlobalstateContext";
 import ClipLoader from "react-spinners/ClipLoader";
+import { toast } from "react-toastify";
 const ProjectDetails=()=>{
     const{status,setStatus,setTab,setShowModal,showModal}=useGlobalState();
     const[project,setProject]=useState({});
@@ -14,23 +15,21 @@ const ProjectDetails=()=>{
         try{
             setStatus("pending");
             const response=await axios.get(`https://work-sync-psi.vercel.app/api/projects/${id}`);
-            console.log(response.data);
             setProject(response.data);
             setStatus("success");
         }
         catch(error){
             setStatus("error");
-            console.log("Error occur while fetching")
+            toast.error("Failed to fetch projects. Please try again.");
         }
         }
     const fetchAssignments=async()=>{
         try{
             const response=await axios.get(`https://work-sync-psi.vercel.app/api/assignments/project/${id}`);
-            console.log(response.data)
             setAssignments(response.data);
         }
         catch(error){
-            console.log("error occur while fetching")
+            toast.error("Failed to fetch projects. Please try again.");
         }
     }    
     useEffect(()=>{

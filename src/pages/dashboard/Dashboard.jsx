@@ -5,6 +5,7 @@ import classes from './Dashboard.module.css';
 import ClipLoader from "react-spinners/ClipLoader";
 import { Aside, Assignments, Navbar, ProjectModal, Projects } from "../../components";
 import useDebounce from "../../hooks/useDebounce";
+import { toast } from "react-toastify";
 
 const Dashboard=()=>{
     const[input,setInput]=useState("");
@@ -14,12 +15,11 @@ const Dashboard=()=>{
             try{
                 setStatus("pending");
                 const response=await axios.get("https://work-sync-psi.vercel.app/api/projects",{params:{input:debounceInput}});
-                console.log('fetching')
             setProjects(response.data);
             setStatus("success");
             }
             catch(error){
-                console.error("Error fetching projects:", error);
+                toast.error("Failed to fetch projects. Please try again.");
             }   
         }
     const fetchAssignments=async()=>{
@@ -30,7 +30,7 @@ const Dashboard=()=>{
             setStatus('success');
         }
         catch(error){
-            console.log("Error fetching assignment",error)
+            toast.error("Failed to fetch projects. Please try again.");
         }
     }    
     useEffect(()=>{

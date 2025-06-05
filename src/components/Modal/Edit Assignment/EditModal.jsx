@@ -8,13 +8,10 @@ import { toast } from "react-toastify";
 const EditModal=({assignment,onSuccess})=>{
     const{setShowModal}=useGlobalState();
     const[data,setData]=useState({name:assignment.name,endDate:assignment.endDate,allocationPercentage:assignment.allocationPercentage,engineerId:assignment.engineerId._id});
-    console.log(assignment);
     const handleUpdate=async(e)=>{
         e.preventDefault();
-        console.log(data);
         try{
             const response=await axios.post(`https://work-sync-psi.vercel.app/api/assignments/${assignment._id}`,data);
-            console.log(response);
             toast.success("Assignment update successfully");
             setShowModal(false);
             onSuccess();

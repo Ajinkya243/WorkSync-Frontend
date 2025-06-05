@@ -26,7 +26,7 @@ const EditProfile=({user,onSuccess})=>{
             setShowModal(false);
         }
         catch(error){
-            console.log(error);
+            toast.error("Error occur")
         }
     }
         return(

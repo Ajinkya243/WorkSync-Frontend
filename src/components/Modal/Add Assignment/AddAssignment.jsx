@@ -10,7 +10,6 @@ const AddAssignment=({project,onSuccess})=>{
     const[assignment,setAssignment]=useState({projectId:project._id});
     const[skill,setSkill]=useState("");
     const[engineer,setEngineer]=useState([]);
-    console.log(project,skill);
     const fetchEngineers=async()=>{
             const response=await axios.get(`https://work-sync-psi.vercel.app/api/engineers/skills/${skill}`);
             setEngineer(response.data);

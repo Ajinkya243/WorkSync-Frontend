@@ -9,7 +9,6 @@ const Engineers=()=>{
     const[engineers,setEngineers]=useState([]);
     const fetchData=async()=>{
         const response=await axios.get("https://work-sync-psi.vercel.app/api/engineers",{headers:{Authorization:`Bearer ${localStorage.getItem('token')}`}});
-        console.log(response);
         setEngineers(response.data);
     }
     useEffect(()=>{

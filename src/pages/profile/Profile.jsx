@@ -4,6 +4,7 @@ import { useGlobalState } from "../../context/GlobalstateContext";
 import axios from 'axios';
 import classes from './Profile.module.css';
 import ClipLoader from "react-spinners/ClipLoader";
+import { toast } from "react-toastify";
 
 const Profile=()=>{
     const{setTab,tab,user,showModal,setShowModal}=useGlobalState();
@@ -11,11 +12,10 @@ const Profile=()=>{
     const fetchDetails=async()=>{
         try{
             const response=await axios.get(`https://work-sync-psi.vercel.app/api/engineers/${user.id}/capacity`);
-            console.log(response.data);
             setDetails(response.data);
         }
         catch(error){
-            console.log("Error occur while fetching",error)
+           toast.error("Failed to fetch projects. Please try again.");
         }
     }
     useEffect(()=>{
