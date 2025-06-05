@@ -1,0 +1,63 @@
+.dashboard{
+    margin-top: 73px;
+    margin-left: 161px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.input-search{
+    padding: 10px;
+    width: 50%;
+    border-radius: 50px;
+}
+.project-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333333;
+}
+.project-header button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: rgb(36, 119, 252);
+}
+.project-header button:hover{
+    background-color: green;
+    cursor: pointer;
+}
+.loader{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+.projects{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+.projects>*{
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.project-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333333;
+}
+.project-header button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: rgb(36, 119, 252);
+}
+.project-header button:hover{
+    background-color: green;
+    cursor: pointer;
+}

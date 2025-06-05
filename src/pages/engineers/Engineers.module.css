@@ -1,0 +1,45 @@
+.engineers{
+    margin-top: 5rem;
+    margin-left: 10rem;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.grid-header {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: rgba(0, 217, 255, 0.15);
+  color: #2a2a2a;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #cceeff;
+}
+
+.grid-data {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  font-size: 15px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.grid-data:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.grid-data:hover {
+  background-color: #f1faff;
+}
+
+.grid-data p {
+  margin: 0;
+  padding: 4px 8px;
+  color: #333;
+  word-break: break-word;
+}

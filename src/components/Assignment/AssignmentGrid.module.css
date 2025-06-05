@@ -1,0 +1,13 @@
+.grid-header{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    color: grey;
+    background-color: rgba(0, 217, 255, 0.292);
+    font-size: 18px;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+.grid-data{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+}
